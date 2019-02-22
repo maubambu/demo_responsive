@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav.nav-desktop{
+    display: none;
+}
+
+nav.nav-mobile{
+    display: flex;
+    align-items: center;
+    background-color: #4fc3f7;
+    height: 64px;
+    color: #e1f5fe;
+    justify-content: space-between;
+    padding: 0 3.5%;
+    box-shadow: 23px -8px 96px 6px rgba(139,246,255,0.5);
+}
+
+.nav-mobile img{
+    width: 24px;
+    height: 24px;
+}
+
+h1.main-header{
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+    margin: 8% 0;
+}
+
+.cards-container{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.cards-container .card{
+    box-shadow: 8px 14px 96px -21px rgba(0,159,199,0.5);
+    border-radius: 6px;
+    padding: 10% 6%;
+    color: darkgrey;
+}
+
+
+.cards-container .card:not(:last-child){
+    margin-bottom: 15%;
+}
+
+@media only screen and (min-width: 600px){
+
+    nav.nav-mobile{
+        display: none;
+    }
+
+    nav.nav-desktop{
+        display: flex;
+        align-items: center;
+        background-color: #4fc3f7;
+        height: 80px;
+        color: #e1f5fe;
+        justify-content: space-between;
+        padding: 0 2%;
+        box-shadow: 23px -8px 96px 6px rgba(139,246,255,0.5);
+    }
+
+    nav.nav-desktop ul{
+        list-style: none;
+        display: flex;
+        padding: 0;
+        width: 50%;
+        justify-content: space-between;
+        font-size: 28px;
+        max-width: 900px;
+        min-width: 580px;
+        align-items: baseline;
+    }
+
+    nav.nav-desktop ul li{
+        cursor: pointer;
+        user-select: none;
+        transition: all 0.2s ease-in-out;
+        border-bottom: 1px dashed blueviolet;
+    }
+
+    nav.nav-desktop ul li:hover{
+        transform: scale(1.15);
+        background: rgba(0,0,0,0.1);
+        padding: 2%;
+        border-radius: 8px;
+        color: whitesmoke;
+        font-weight: bold;
+    }
+
+    .cards-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-width: 600px;
+        max-width: 1600px;
+        justify-content: space-between;
+    }
+
+    .cards-container .card{
+        width: 30%;
+        padding: 32px;
+        min-width: 300px;
+    }
+
+    .cards-container .card:not(:last-child){
+        margin-bottom: 5%;
+    }
+    
+    h1.main-header{
+        font-size: 32px;
+        margin: 2% 0;
+        color: darkgreen;
+    }
+}
